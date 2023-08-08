@@ -39,7 +39,7 @@ class Auth:
         if header is None:
             return None
 
-        return None
+        return header
 
     def current_user(self, request=None) -> TypeVar('User'):
         """_summary_
