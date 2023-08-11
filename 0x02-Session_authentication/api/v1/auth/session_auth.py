@@ -5,6 +5,8 @@ A class
 
 
 from .auth import Auth
+
+from models.user import User
 from uuid import uuid4
 
 
@@ -19,7 +21,7 @@ class SessionAuth(Auth):
         """
         if user_id is None:
             return None
-        if user_id not isinstance(str):
+        if not isinstance(user_id, str):
             return None
 
         id = uuid4()
