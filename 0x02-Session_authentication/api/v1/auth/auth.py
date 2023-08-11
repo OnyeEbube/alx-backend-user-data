@@ -5,6 +5,10 @@
 
 from typing import List, TypeVar
 from flask import request
+import os
+
+
+session_name = os.getenv('SESSION_NAME')
 
 
 class Auth:
@@ -45,3 +49,10 @@ class Auth:
         """_summary_
         """
         return None
+
+    def session_cookie(self, request=None):
+        """_session_
+        """
+        if request is None:
+            return None
+        return request.cookies.get(session_name)
