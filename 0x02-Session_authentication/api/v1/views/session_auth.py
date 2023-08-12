@@ -31,7 +31,9 @@ def session_auth():
             return resp
     return jsonify({"error": "wrong password"}), 401
 
-@app_views.route('/api/v1/auth_session/logout', methods=['POST'], strict_slashes=False)
+
+@app_views.route('/api/v1/auth_session/logout',
+                 methods=['POST'], strict_slashes=False)
 def session_auth_logout():
     """_summary_
     """
