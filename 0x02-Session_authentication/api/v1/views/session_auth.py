@@ -34,7 +34,7 @@ def session_auth():
 
 @app_views.route('/api/v1/auth_session/logout',
                  methods=['POST'], strict_slashes=False)
-def session_auth_logout():
+def logout():
     """_summary_
     """
     from api.v1.app import auth
