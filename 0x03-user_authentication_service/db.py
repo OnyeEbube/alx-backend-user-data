@@ -43,8 +43,8 @@ class DB:
             User: The newly created User object.
         """
         new_user = User(email=email, hashed_password=hashed_password)
-        self._session.add(new_user)
-        self._session.commit()
+        self.__session.add(new_user)
+        self.__session.commit()
         return new_user
 
     def find_user_by(self, **kwargs) -> User:
