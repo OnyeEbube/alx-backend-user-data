@@ -12,7 +12,7 @@ from sqlalchemy.orm.exc import NoResultFound
 from typing import Union
 
 
-def _hash_password(password: str) -> bytes:
+def _hash_password(password: str) -> str:
     """_summary_
     """
     salt = bcrypt.gensalt()
