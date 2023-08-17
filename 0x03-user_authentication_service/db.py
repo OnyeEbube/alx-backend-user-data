@@ -59,10 +59,9 @@ class DB:
             raise NoResultFound
         return user
 
-
-"""
     def update_user(self, user_id: int, **kwargs) -> None:
-        _summary_
+        """_summary_
+        """
         user = self.find_user_by(id=user_id)
         for key, value in kwargs.items():
             if not hasattr(user, key):
@@ -71,4 +70,3 @@ class DB:
 
         self._session.commit()
         return None
-"""
