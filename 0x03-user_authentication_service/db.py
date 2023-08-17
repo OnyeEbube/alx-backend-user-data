@@ -47,10 +47,11 @@ class DB:
         self._session.add(new_user)
         self._session.commit()
         return new_user
+
+
 """
     def find_user_by(self, **kwargs) -> User:
         _summary_
-        
         if not kwargs:
             raise InvalidRequestError
 
@@ -61,7 +62,6 @@ class DB:
 
     def update_user(self, user_id: int, **kwargs) -> None:
         _summary_
-        
         user = self.find_user_by(id=user_id)
         for key, value in kwargs.items():
             if not hasattr(user, key):
